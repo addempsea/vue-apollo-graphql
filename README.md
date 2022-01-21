@@ -25,7 +25,7 @@ cd vue-apollo-graphql
 npm install
 ```
 
-Create a `.env` file and add the environment variables described in the [.env.sample file](https://github.com/addempsea/vue-apollo-graphql.git/blob/main/.env.sample).
+Create a `.env` file and add the environment variables described in the [.env.sample file](https://github.com/addempsea/vue-apollo-graphql/blob/main/.env.sample).
 
 ## Running migrations
 
