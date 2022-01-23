@@ -9,7 +9,6 @@ app.get('/', (req: Request, res: Response) => res.redirect('/transaction'));
 const clientDir = join(__dirname, '../../client/dist');
 app.use(express.static(clientDir));
 
-// adds a simple get route 
 app.use('/transaction', (req: Request, res: Response) => res.sendFile(`${clientDir}/index.html`));
 
 
@@ -26,3 +25,5 @@ const port = 4001
 app.listen({ port }, () => {
   console.info(`🚀🚀 Server ready at http://localhost:${port}`)
 })
+
+export default app

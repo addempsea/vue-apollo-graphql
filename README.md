@@ -39,6 +39,11 @@ npm run migrate
 npm run dev
 ```
 
+## Running tests
+```bash
+npm run test
+```
+
 ## Technologies
 
 - Node JS

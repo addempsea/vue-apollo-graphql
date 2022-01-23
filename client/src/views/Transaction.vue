@@ -2,12 +2,12 @@
   <div table-container>
     <div center>
       <label for="">From: </label>
-      <input type="date" name="date" id="ww" v-model="filter.from" />
+      <input type="date" name="date" id="from" v-model="filter.from" />
 
       <label for="">To: </label>
-      <input type="date" name="date" id="ee" v-model="filter.to" />
+      <input type="date" name="date" id="to" v-model="filter.to" />
 
-      <button class="button is-primary" @click="showMore()">Filter</button>
+      <button class="button is-primary" @click="filterTransaction()">Filter</button>
     </div>
     <table class="table is-hoverable is-narrow is-bordered">
       <caption>
@@ -93,10 +93,8 @@ export default {
     },
   },
   methods: {
-    showMore() {
-      // Fetch more data and transform the original result
+    filterTransaction() {
       this.$apollo.queries.Transactions.refetch({
-        // New variables
         variables: {
           filter: this.filter,
         },
